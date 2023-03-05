@@ -4,7 +4,8 @@ from .models import Product
 
 def index(request):
     products = Product.objects.all()    
-    print(products)
+    print("--------------------",products[0].image)
+
     return render(request, 'index.html', context={'products': products})
 
 
