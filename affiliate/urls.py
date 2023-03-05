@@ -22,4 +22,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('affiliateapp.urls')),
 
-] + static(settings.STATIC_URL)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
