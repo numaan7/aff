@@ -75,32 +75,37 @@
          <div class="container">
             <div class="row">
                <div class="col-sm-12">
-                  <h1 class="product_taital">Our Products</h1>
-                  <p class="product_text">incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                  <h1 class="product_taital">Read...</h1>
                </div>
             </div>
+            
+            {% for blog in allblogs %}
             <div class="product_section_2 layout_padding">
                <div class="row">
-                  {% for product in products %}
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="product_box">
-                        <h4 class="bursh_text">{{product.name}}</h4>
-                        {% comment %} <a><p class="lorem_text">{{product.link}}</p></a> {% endcomment %}
-                        <img src={{product.image.url}} class="image_1">
-                        <div class="btn_main">
-                           <div class="buy_bt">
-                              <ul>
-                                 <li class="active"><a target="_blank" href="http://{{product.link}}">Buy Now</a></li>
-                                 <!-- <li><a href="#">Buy Now</a></li> -->
-                              </ul>
-                           </div>
-                           <h3 class="price_text">{{product.price}}</h3>
-                        </div> 
-                     </div>
-                  </div>
-                  {% endfor %}
+                  <div class="blog-box row">
+                     <div class="col-md-4">
+                         <div class="post-media">
+                             <a href="tech-single.html" title="">
+                                 <img src={{blog.image.url }} alt="" class="img-fluid">
+                                 <div class="hovereffect"></div>
+                             </a>
+                         </div><!-- end media -->
+                     </div><!-- end col -->
+
+                     <div class="blog-meta big-meta col-md-8">
+                        <h2 class="about_text" style="font-size:26px">{{blog.title}}</h2>
+                         <p class="about_text" style="font-size:16px">{{blog.description |slice:":400"}}  <h3 ><a style="color:green;" href="blog/{{blog.title}}" title="">More...</a></h3></p>
+                         
+                         <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="">Reviews</a></small>
+                         <small><a href="tech-single.html" title="">{{blog.timestamp}}</a></small>
+                         <small><a href="tech-author.html" title="">by Matilda</a></small>
+                         <small><a href="tech-single.html" title=""><i class="fa fa-eye"></i> 1114</a></small>
+                     </div><!-- end meta -->
+                 </div><!-- end blog-box -->
+                 
                </div>
             </div>
+            {% endfor %}
          </div>
       </div>
       <!-- product section end -->
@@ -209,63 +214,7 @@
       </div>
       <!-- contact section end -->
       <!-- footer section start -->
-      <div class="footer_section layout_padding">
-         <div class="container">
-            <div class="footer_logo"><a href="/home/"><img src={% static "images/footer-logo.png" %}></a></div>
-            <div class="contact_section_2">
-               <div class="row">
-                  <div class="col-sm-4">
-                     <h3 class="address_text">Contact Us</h3>
-                     <div class="address_bt">
-                        <ul>
-                           <li>
-                              <a href="#">
-                              <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left10">Address : Loram Ipusm</span>
-                              </a>
-                           </li>
-                           <li>
-                              <a href="#">
-                              <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left10">Call : +01 1234567890</span>
-                              </a>
-                           </li>
-                           <li>
-                              <a href="#">
-                              <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left10">Email : demo@gmail.com</span>
-                              </a>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="col-sm-4">
-                     <div class="footer_logo_1"><a href="index.html"><img src={% static "images/footer-logo.png" %}></a></div>
-                     <p class="dummy_text">commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
-                  </div>
-                  <div class="col-sm-4">
-                     <div class="main">
-                        <h3 class="address_text">Best Products</h3>
-                        <p class="ipsum_text">dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="social_icon">
-               <ul>
-                  <li>
-                     <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                  </li>
-                  <li>
-                     <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                  </li>
-                  <li>
-                     <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                  </li>
-                  <li>
-                     <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                  </li>
-               </ul>
-            </div>
-         </div>
-      </div>
+      
       <!-- footer section end -->
       <!-- copyright section start -->
       <div class="copyright_section">
@@ -280,7 +229,6 @@
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>
       <script src="js/plugin.js"></script>
-      <!-- sidebar -->z
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
       <!-- javascript --> 

@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Beautiflie</title>
+      <title>Vinirak</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -44,17 +44,17 @@
                <a href="/">Home</a>
                <a href="/products">Products</a>
                <a href="/about">About</a>
-               <a href="/client">Client</a>
+               <a href="/client">Clients</a>
                <a href="/contact">Contact</a>
             </div>
             <span class="toggle_icon" onclick="openNav()"><img src={% static "images/toggle-icon.png" %}></span>
-            <a class="logo" href="/"><img src={% static "images/logo.png" %}></a></a>
+            <a class="logo" href="/"><img width="120px; height:90px" src={% static "images/Logo.png" %}></a></a>
             <form class="form-inline ">
                <div class="login_text">
                   <ul>
-                     <li><a href="#"><img src={% static "images/user-icon.png" %}></a></li>
+                     {% comment %} <li><a href="#"><img src={% static "images/user-icon.png" %}></a></li>
                      <li><a href="#"><img src={% static "images/bag-icon.png" %}></a></li>
-                     <li><a href="#"><img src={% static "images/search-icon.png" %}></a></li>
+                     <li><a href="#"><img src={% static "images/search-icon.png" %}></a></li> {% endcomment %}
                   </ul>
                </div>
             </form>
@@ -64,4 +64,60 @@
 {% block body %}
 
 {% endblock body %}
+<div class="footer_section layout_padding">
+   <div class="container">
+      <div class="footer_logo"><a href="index.html"><img src={% static "images/footer-logo.png" %}></a></div>
+      <div class="contact_section_2">
+         <div class="row">
+            <div class="col-sm-4">
+               <h3 class="address_text">Contact Us</h3>
+               <div class="address_bt">
+                  <ul>
+                     <li>
+                        <a href="#">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left10">Address : Bareilly, Uttar Pradesh</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                        <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left10">Call : +01 1234567890</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                        <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left10">Email : demo@gmail.com</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            {% comment %} <div class="col-sm-4">
+               <div><a href="/"><img src={% static "images/Logo.png" %}></a></div>
+            </div> {% endcomment %}
+            {% comment %} <div class="col-sm-4">
+               <div class="main">
+                  <h3 class="address_text">Best Products</h3>
+                  <p class="ipsum_text">dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+               </div>
+            </div> {% endcomment %}
+         </div>
+      </div>
+      <div class="social_icon">
+         <ul>
+            <li>
+               <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            </li>
+            <li>
+               <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </li>
+            <li>
+               <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </li>
+            <li>
+               <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </li>
+         </ul>
+      </div>
+   </div>
+</div>
 </body>
