@@ -24,7 +24,7 @@
 
                 <div class="blog-meta big-meta col-md-8">
                    <h2 class="about_text" style="font-size:26px">{{blog.title}}</h2>
-                    <p class="about_text" style="font-size:16px">{{blog.description |slice:":400"}}  <h3 ><a style="color:green;" href="blog/{{blog.title}}" title="">More...</a></h3></p>
+                    <p class="about_text" style="font-size:16px">{{blog.description |safe |slice:":400"}}  <h3 ><a style="color:green;" href="blog/{{blog.title}}" title="">More...</a></h3></p>
                     
                     <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="">Reviews</a></small>
                     <small><a href="tech-single.html" title="">{{blog.timestamp}}</a></small>
