@@ -7,6 +7,8 @@ class Product(models.Model):
     description = models.TextField(default="This is an awesomeproduct")
     price = models.IntegerField(default=100)
     image = models.ImageField(storage=S3Boto3Storage(), default=None)
+    altname = models.CharField(max_length=100, default='image')
+
 
     def __str__(self):
         return self.name
@@ -16,6 +18,7 @@ class Blog(models.Model):
     description = models.TextField()
     timestamp = models.DateTimeField(default=datetime.datetime.now())
     image = models.ImageField(storage=S3Boto3Storage(), default="www.google.com")
+    altname = models.CharField(max_length=100, default='image')
 
     def __str__(self):
         return self.title

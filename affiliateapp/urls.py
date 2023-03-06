@@ -8,6 +8,8 @@ urlpatterns = [
     path('about', views.about),
     path('client', views.client),
     path('contact', views.contact),
+    path('blogs', views.blogs),
+
     path('blog/<str:posttitle>/', views.blogbytitle),
 
 ]

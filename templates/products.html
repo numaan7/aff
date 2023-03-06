@@ -17,7 +17,7 @@
                      <div class="product_box">
                         <h4 class="bursh_text">{{product.name}}</h4>
                         <p class="lorem_text">{{product.description}} </p>
-                        <img src={{product.image.url}} class="image_1">
+                        <img src={{product.image.url}} alt="{{product.altname}}" class="image_1">
                         <div class="btn_main">
                            <div class="buy_bt">
                               <ul>
@@ -32,17 +32,12 @@
                {% endfor %}
              </div>
              
-             <div class="seemore_bt"><a href="#">See More</a></div>
           </div>
        </div>
     </div>
     <!-- product section end -->
     <!-- copyright section start -->
-    <div class="copyright_section">
-       <div class="container">
-          <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a></p>
-       </div>
-    </div>
+    
     <!-- copyright section end -->
     <!-- Javascript files-->
     <script src="js/jquery.min.js"></script>

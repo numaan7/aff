@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<div class="product_section layout_padding">
+    <div class="container">
+       <div class="row">
+          <div class="col-sm-12">
+             <h1 class="product_taital">Read...</h1>
+          </div>
+       </div>
+       
+       {% for blog in allblogs %}
+       <div class="product_section_2 layout_padding">
+          <div class="row">
+             <div class="blog-box row">
+                <div class="col-md-4">
+                    <div class="post-media">
+                        <a href="tech-single.html" title="">
+                            <img src={{blog.image.url }} alt="{{blog.altname}}" class="img-fluid">
+                            <div class="hovereffect"></div>
+                        </a>
+                    </div><!-- end media -->
+                </div><!-- end col -->
+
+                <div class="blog-meta big-meta col-md-8">
+                   <h2 class="about_text" style="font-size:26px">{{blog.title}}</h2>
+                    <p class="about_text" style="font-size:16px">{{blog.description |slice:":400"}}  <h3 ><a style="color:green;" href="blog/{{blog.title}}" title="">More...</a></h3></p>
+                    
+                    <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="">Reviews</a></small>
+                    <small><a href="tech-single.html" title="">{{blog.timestamp}}</a></small>
+                    <small><a href="tech-author.html" title="">by Matilda</a></small>
+                    <small><a href="tech-single.html" title=""><i class="fa fa-eye"></i> 1114</a></small>
+                </div><!-- end meta -->
+            </div><!-- end blog-box -->
+            
+          </div>
+       </div>
+       {% endfor %}
+    </div>
+ </div>
+ <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>  
+      <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+      <script>
+         function openNav() {
+           document.getElementById("mySidenav").style.width = "100%";
+         }
+         
+         function closeNav() {
+           document.getElementById("mySidenav").style.width = "0";
+         }
+      </script>
+{% endblock body %}

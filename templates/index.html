@@ -86,7 +86,7 @@
                      <div class="col-md-4">
                          <div class="post-media">
                              <a href="tech-single.html" title="">
-                                 <img src={{blog.image.url }} alt="" class="img-fluid">
+                                 <img src={{blog.image.url }} alt="{{blog.altname}}" class="img-fluid">
                                  <div class="hovereffect"></div>
                              </a>
                          </div><!-- end media -->
@@ -106,6 +106,8 @@
                </div>
             </div>
             {% endfor %}
+            <div style="text-align: center;" class="readmore_bt"><a style="display: inline-block;" href="/blogs">Read all blogs</a></div>
+
          </div>
       </div>
       <!-- product section end -->
@@ -217,11 +219,7 @@
       
       <!-- footer section end -->
       <!-- copyright section start -->
-      <div class="copyright_section">
-         <div class="container">
-            <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a></p>
-         </div>
-      </div>
+      
       <!-- copyright section end -->
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
