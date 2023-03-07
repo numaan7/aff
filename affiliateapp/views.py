@@ -19,6 +19,9 @@ def about(request):
     return render(request, 'about.html', context={'products': products})
 
 
+def services(request):
+    return render(request, 'services.html')
+
 def client(request):
     return render(request, 'client.html', context={'products': products})
 

@@ -43,14 +43,20 @@
                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                <a href="/">Home</a>
                {% comment %} <a href="/products">Products</a> {% endcomment %}
-               <a href="/about">About</a>
+               <a href="/about">About Us</a>
                {% comment %} <a href="/client">Clients</a> {% endcomment %}
                <a href="/blogs">Blogs</a>
-
-               <a href="/contact">Contact</a>
+               <a href="/services">Services</a>
+               <a href="/services">Write for Us</a>
+               <a href="/contact">Contact Us</a>
             </div>
             <span class="toggle_icon" onclick="openNav()"><img src={% static "images/toggle-icon.png" %}></span>
-            <a class="logo" href="/"><img width="120px; height:90px" src={% static "images/Logo Png 300-300.png" %}></a></a>
+            {% comment %} <a class="logo" href="/"><img width="120px; height:90px" src={% static "images/Logo Png 300-300.png" %}></a></a> {% endcomment %}
+            {% comment %} <a class="logo" href="/"><img width="120px; height:90px" src={% static "images/Logo Png 300-300.png" %}></a></a> {% endcomment %}
+            <a class="logo" href="/">
+               <img width="120px" height="90px" src="https://www.instagram.com/artick_zone/?__a=1" alt="Artick Zone Instagram Profile">
+             </a>
+              
             <form class="form-inline ">
                <div class="login_text">
                   <ul>
@@ -76,19 +82,13 @@
                <div class="address_bt">
                   <ul>
                      <li>
-                        <a href="#">
                         <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left10">Address : Bareilly, Uttar Pradesh</span>
-                        </a>
                      </li>
                      <li>
-                        <a href="#">
-                        <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left10">Call : +01 1234567890</span>
-                        </a>
+                        <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left10">Call : +91 8448324869</span>
                      </li>
                      <li>
-                        <a href="#">
-                        <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left10">Email : demo@gmail.com</span>
-                        </a>
+                        <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left10">Email : vinirak25@gmail.com</span>
                      </li>
                   </ul>
                </div>

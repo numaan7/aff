@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+ <!-- header section end -->
+ <!-- about section start -->
+ <div class="about_section layout_padding">
+    <div class="container">
+       <div class="about_section_main">
+          <div class="row">
+             <div class="col-md-6">
+                <div class="about_taital_main">
+                   <h1 class="about_taital">Our Services</h1>
+                   <p class="about_text">We are a leading provider of Digital Marketing, Affiliate Marketing and Influencer Marketing. Our team of experts has years of experience in promoting your business through different platforms which are suitable for your business and is committed to delivering exceptional results for our clients.
+                    <br><br>
+                    Our services are designed to help businesses showcase their products, services and presence online. Whether you are looking to keep yourself on the top of Search Engine Pages or among the top rated social media pages, we have the knowledge and expertise to help you achieve your objectives.<br><br>
+                    <span style="font-size: 1.5em;">Some of our key services include</span>:<br>
+                    <span style="font-weight:900">Search Engine Optimization(SEO)</span>: Our SEO services help your business to reach on top of search engine pages like Google, Bing etc. We use the latest SEO Tools/Technologies to optimise your website based on google algorithms.
+                    <br><br>
+                    <span style="font-weight:900">Social Media Optimization</span>: We help you manage all your social media platforms like Instagram, Facebook, LinkedIn, Twitter and more at one place from organic posts to targeted ads.
+                    <br><br>
+                    <span style="font-weight:900">PPC (Google Adwords)</span>: Our PPC services help our clients to track and analyse the performance of their marketing campaigns, making it easier to measure ROI and make data-driven decisions.
+                    <br><br>
+                    <span style="font-weight:900">Google Map Listing</span>: We help our clients list their business on Google Maps, so that their customers can find them locally on map. 
+                    <br><br>
+                    <span style="font-weight:900">Influencer Marketing</span>: With successful influencer marketing campaigns we help businesses to build strong relationships between the business and the influencer, as well as creating high-quality content that resonates with the target audience. 
+                    <br><br>
+                    <span style="font-weight:900">Affiliate Marketing</span>: Our <span style="font-weight:900">Affiliate Marketing</span> services are designed to market our clients products and services online. We use a combination of paid tools and proven strategies to help our clients sell their products.
+                    <br><br>
+                    At our core, we believe in loyalty, honesty and trust. We are passionate about helping our clients succeed, and we are committed to delivering exceptional service and results. We work closely with our clients to understand their unique needs and goals, and we develop customised strategies to help them achieve success.
+                    <br><br>
+                    If you are looking to [Insert Primary Benefit of Your Services], we invite you to explore our services further and learn how we can help you achieve your objectives. Contact us today to schedule a consultation and see how we can help you grow your business.
+                    
+                     </p>
+                   {% comment %} <div class="readmore_bt"><a href="#">Read More</a></div> {% endcomment %}
+                </div>
+             </div>
+             <div class="col-md-6">
+                <div><img src={% static "images/about-img.png" %} class="image_3"></div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!-- about section end -->
+ <!-- footer section start -->
+ 
+ <!-- footer section end -->
+ <!-- copyright section start -->
+
+ <!-- copyright section end -->
+ <!-- Javascript files-->
+ <script src="js/jquery.min.js"></script>
+ <script src="js/popper.min.js"></script>
+ <script src="js/bootstrap.bundle.min.js"></script>
+ <script src="js/jquery-3.0.0.min.js"></script>
+ <script src="js/plugin.js"></script>
+ <!-- sidebar -->
+ <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+ <script src="js/custom.js"></script>
+ <!-- javascript --> 
+ <script src="js/owl.carousel.js"></script>
+ <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>  
+ <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+ <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+ </script>
+{% endblock body %}
