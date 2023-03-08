@@ -4,7 +4,7 @@
 <div class="layout_padding">
    <div class="container">
       {% for blog in allblogs %}
-     <div class="about_section_main" style="margin-top:25px">
+     <div class="about_section_main" style="margin-top:25px; padding-bottom:25px">
         <div class="row">
             <div class="col-md-6">
                <div><img src={{blog.image.url}} class="image_3"></div>
@@ -13,7 +13,6 @@
                <div class="about_taital_main">
                   <h2 class="about_text" style="font-size:26px">{{blog.title}}</h2>
                   <p class="about_text" style="font-size:16px">{{blog.description |safe |slice:":400"}}  <h3 ><a style="color:green;" href="blog/{{blog.title}}" title="">More...</a></h3></p>
-                        
                   {% comment %} <div class="readmore_bt"><a href="#">Read More</a></div> {% endcomment %}
                </div>
             </div>
