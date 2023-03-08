@@ -7,7 +7,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <!-- mobile metas -->
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1, shrink-to-fit=no", >
       <!-- site metas -->
       <title>Vinirak</title>
       <meta name="keywords" content="">
@@ -32,6 +32,11 @@
       <link rel="stylesheet" href= {% static "css/owl.theme.default.min.css" %}>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+   <style>
+      .logo-class:hover{
+         cursor: pointer;
+     }
+   </style>
    </head>
    {% endblock head %}
 {% block title %}{% endblock title %}
@@ -50,8 +55,8 @@
                <a href="/contact">Write for Us</a>
                <a href="/contact">Contact Us</a>
             </div>
-            <span class="toggle_icon" onclick="openNav()"><img src={% static "images/toggle-icon.png" %}></span>
-            <a class="logo" href="/"><img width="120px; height:90px" src={% static "images/Logo Png 300-300.png" %}></a></a>
+            <span class="toggle_icon logo-class" onclick="openNav()"><img src={% static "images/toggle-icon.png" %}></span>
+            <a class="logo logo-class" href="/"><img width="120px; height:90px" src={% static "images/Logo Png 300-300.png" %}></a></a>
             {% comment %} <a class="logo" href="/"><img width="120px; height:90px" src={% static "images/Logo Png 300-300.png" %}></a></a> {% endcomment %}
               
             <form class="form-inline ">
@@ -71,7 +76,6 @@
 {% endblock body %}
 <div class="footer_section layout_padding">
    <div class="container">
-      <div class="footer_logo"><a href="index.html"><img src={% static "images/footer-logo.png" %}></a></div>
       <div class="contact_section_2">
          <div class="row">
             <div class="col-sm-4">

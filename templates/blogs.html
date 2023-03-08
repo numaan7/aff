@@ -1,41 +1,28 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block body %}
-<div class="product_section layout_padding">
+<div class="layout_padding">
    <div class="container">
-      <div class="row">
-         <div class="col-sm-12">
-            <h1 class="product_taital">Blogs</h1>
-         </div>
-         {% for blog in allblogs %}
-
-         <div class="product_section_2 layout_padding">
-            <div class="row">
-               <div class="blog-box row">
-                  <div class="col-md-4">
-                     <div class="post-media">
-                        <a href="tech-single.html" title="">
-                           <img src={{blog.image.url }} alt="{{blog.altname}}" class="img-fluid">
-                           <div class="hovereffect"></div>
-                        </a>
-                     </div><!-- end media -->
-                  </div><!-- end col -->
-
-                  <div class="blog-meta big-meta col-md-8">
-                     <h2 class="about_text" style="font-size:26px">{{blog.title}}</h2>
-                     <p class="about_text" style="font-size:16px">{{blog.description |safe |slice:":400"}}  <h3 ><a style="color:green;" href="blog/{{blog.title}}" title="">More...</a></h3></p>
-                     <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="">Reviews</a></small>
-                     <small><a href="tech-single.html" title="">{{blog.timestamp}}</a></small>
-                     <small><a href="tech-author.html" title="">by Matilda</a></small>
-                     <small><a href="tech-single.html" title=""><i class="fa fa-eye"></i> 1114</a></small>
-                  </div><!-- end meta -->
-               </div><!-- end blog-box -->
+      {% for blog in allblogs %}
+     <div class="about_section_main" style="margin-top:25px">
+        <div class="row">
+            <div class="col-md-6">
+               <div><img src={% static "images/about-img.png" %} class="image_3"></div>
             </div>
-         </div>
-         {% endfor %}
-      </div>
-   </div>
- </div>
+            <div class="col-md-6">
+               <div class="about_taital_main">
+                  <h2 class="about_text" style="font-size:26px">{{blog.title}}</h2>
+                  <p class="about_text" style="font-size:16px">{{blog.description |safe |slice:":400"}}  <h3 ><a style="color:green;" href="blog/{{blog.title}}" title="">More...</a></h3></p>
+                        
+                  {% comment %} <div class="readmore_bt"><a href="#">Read More</a></div> {% endcomment %}
+               </div>
+            </div>
+           
+        </div>
+     </div>
+     {% endfor %}
+  </div>
+</div>
  <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>

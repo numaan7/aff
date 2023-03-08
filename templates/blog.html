@@ -2,38 +2,27 @@
 {% load static %}
 
 {% block body %}
-<div class="contact_section layout_padding">
-    <div class="container">
-       <div class="row">
-        <div class="product_section_2 layout_padding">
-            <div class="row">
-               <div class="blog-box row">
-                  <div class="col-md-4">
-                      <div class="post-media">
-                        an <a href="tech-single.html" title="">
-                              <img src={{blog.image.url }} alt="{{blog.altname}}" class="img-fluid">
-                              <div class="hovereffect"></div>
-                          </a>
-                      </div><!-- end media -->
-                  </div><!-- end col -->
-
-                  <div class="blog-meta big-meta col-md-8">
-                     <h2 class="about_text" style="font-size:26px">{{blog.title}}</h2>
-                      <p class="about_text" style="font-size:16px">{{blog.description | safe}}  <h3 ><a style="color:green;" href="blog/{{blog.title}}" title=""></a></h3></p>
-                      
-                      <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="">Reviews</a></small>
-                      <small><a href="tech-single.html" title="">{{blog.timestamp}}</a></small>
-                      <small><a href="tech-author.html" title="">by Matilda</a></small>
-                      <small><a href="tech-single.html" title=""><i class="fa fa-eye"></i> 1114</a></small>
-                  </div><!-- end meta -->
-              </div><!-- end blog-box -->
-              
+<div class="layout_padding">
+   <div class="container">
+      {% comment %} {% for blog in allblogs %} {% endcomment %}
+     <div class="about_section_main" style="margin-top:25px; margin-bottom:25px">
+        <div class="row">
+            <div class="col-md-6">
+               <div><img src={% static "images/about-img.png" %} class="image_3"></div>
             </div>
-         </div>
-       </div>
-    </div>
-    
- </div>
+            <div class="col-md-6">
+               <div class="about_taital_main">
+                  <h2 class="about_text" style="font-size:26px">{{blog.title}}</h2>
+                  <p class="about_text" style="font-size:16px">{{blog.description}}<h3></h3></p>
+                        
+                  {% comment %} <div class="readmore_bt"><a href="#">Read More</a></div> {% endcomment %}
+               </div>
+            </div>
+           
+        </div>
+     </div>
+     {% comment %} {% endfor %} {% endcomment %}
+  </div>
  <!-- contact section end -->
  <!-- Javascript files-->
  <script src="js/jquery.min.js"></script>
