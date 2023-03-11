@@ -13,7 +13,7 @@
       <div id="myCarousel" class="carousel slide banner-main" data-ride="carousel">
          <div class="carousel-inner">
             <div class="carousel-item active">
-               <img class="first-slide" src="{% static "images/serv.png" %}" alt="First slide">
+               <img class="first-slfide" src="{% static "images/serv.png" %}" alt="First slide">
                <div class="container">
                   <div class="carousel-caption relative">
                      {% comment %} <h1 style="color:black">About Us</h1>
@@ -84,7 +84,7 @@
                      {% comment %} <span>10 August 2019</span> {% endcomment %}
                   </figure>
                   <h3>{{blog.title}}</h3>
-                  <p>{{blog.description | slice:":400"}}</p>
+                  <p>{{blog.description |safe | slice:":400"}}</p>
                   <a style="color:green;" href="blog/{{blog.title}}" title="">More...</a>
                </div>
             </div>
