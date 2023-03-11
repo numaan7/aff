@@ -41,6 +41,10 @@ def blogs(request):
     blog = Blog.objects.all()
     return render(request, 'blogs.html', context={'allblogs':blog})
 
+def write(request):
+    blog = Blog.objects.all()
+    return render(request, 'write.html', context={'allblogs':blog})
+
 def submitform(request):
     try:
         if request.method == 'POST':

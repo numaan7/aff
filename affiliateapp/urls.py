@@ -16,6 +16,8 @@ urlpatterns = [
     path('service/<str:servicetitle>/', views.servicebytitle),
 
     path('submitform/', views.submitform),
+    path('writeforus/', views.write),
+
 
 
 ]
