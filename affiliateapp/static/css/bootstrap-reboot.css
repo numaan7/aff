@@ -37,6 +37,9 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
+  overflow-x: hidden;
+  /* text-justify: inter-word; */
+  text-align: justify;
 }
 
 [tabindex="-1"]:focus {

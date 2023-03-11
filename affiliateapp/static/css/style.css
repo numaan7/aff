@@ -91,7 +91,9 @@ h2 {
 h3 {
 	font-size: 18px
 }
-
+p{
+	text-align: justify;
+}
 h4 {
 	font-size: 16px
 }
@@ -1626,10 +1628,13 @@ margin-bottom: 20px;
 	color: #fc4311;
 	line-height: 46px;
 	border-bottom: #fc4311 solid 1px;
-	width: 210px;
+	width: 100%;
+	max-width: 16%;
 	margin: 0 auto;
 	margin-bottom: 0px;
 	margin-bottom: 20px;
+	display: flex;
+    justify-content: center
 }
 
 .service .service-box:hover .hoverle {
@@ -1732,7 +1737,7 @@ img.zoom {
 }
 
 .about .titlepage {
-	text-align: center;
+	text-align: justify;
 	padding-bottom: 60px;
 }
 
@@ -1743,10 +1748,12 @@ img.zoom {
 	color: #050303;
 	line-height: 46px;
 	border-bottom: #fc4311 solid 1px;
-	width: 410px;
+	max-width: 25%;
 	margin: 0 auto;
 	margin-bottom: 0px;
 	margin-bottom: 20px;
+	display: flex;
+    justify-content: center
 }
 
 .about .titlepage span {
@@ -1759,6 +1766,7 @@ img.zoom {
 	width: 100%;
 	float: right;
     padding: 18px 0;
+	text-align: justify;
 } 
 .about .about-box h3 {
 	font-size: 36px;
@@ -1841,6 +1849,7 @@ margin-bottom: 20px;
 
 .blog .blog-box {
     margin-bottom: 30px;
+	text-align: justify;
 } 
 
 .blog .blue h3 {
