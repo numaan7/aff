@@ -33,6 +33,10 @@ def blogbytitle(request, posttitle):
     blog = Blog.objects.get(title=posttitle)
     return render(request, 'blog.html', context={'blog':blog})
 
+def servicebytitle(request, servicetitle):
+    service = Service.objects.get(title=servicetitle)
+    return render(request, 'service.html', context={'service':service})
+
 def blogs(request):
     blog = Blog.objects.all()
     return render(request, 'blogs.html', context={'allblogs':blog})

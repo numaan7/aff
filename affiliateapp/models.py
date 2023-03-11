@@ -26,6 +26,7 @@ class Blog(models.Model):
 class Service(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
+    image = models.ImageField(storage=S3Boto3Storage(), default="image-link")
     
     def __str__(self):
         return self.title

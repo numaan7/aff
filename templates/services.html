@@ -9,12 +9,10 @@
                <h2>Services </h2>
                <span>We are a leading provider of Digital Marketing, Affiliate Marketing and Influencer Marketing. Our team of experts has years of experience in promoting your business through different platforms which are suitable for your business and is committed to delivering exceptional results for our clients.<br><br>
 
-                  Our services are designed to help businesses showcase their products, services and presence online. Whether you are looking to keep yourself on the top of Search Engine Pages or among the top rated social media pages, we have the knowledge and expertise to help you achieve your objectives.<br>
-                  Some of our key services include:<br>
-                  {% for service in services %}
-                  <span style="font-weight:600;"> {{service.title}}</span>: {{service.description}}
-                  <br>
-                  {% endfor %}
+                  Our services are designed to help businesses showcase their products, services and presence online. Whether you are looking to keep yourself on the top of Search Engine Pages or among the top rated social media pages, we have the knowledge and expertise to help you achieve your objectives.<br><br>
+                  At our core, we believe in loyalty, honesty and trust. We are passionate about helping our clients succeed, and we are committed to delivering exceptional service and results. We work closely with our clients to understand their unique needs and goals, and we develop customised strategies to help them achieve success.
+                  <br><br>
+                  If you are looking to enhance your business digitally, we invite you to explore our services further and learn how we can help you achieve your objectives. Contact us today to schedule a consultation and see how we can help you grow your business.
                   
             </div>
          </div>
@@ -22,78 +20,20 @@
    </div>
    <div class="container margin-r-l">
       <div class="row">
+         {% for service in services %}
          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 thumb">
             <div class="service-box">
                <figure>
-                  <a href="/blog/Digital Marketing Services and Online Marketing Solutions" class="fancybox" rel="ligthbox">
-                  <img  src="{% static "images/1.jpg" %}" class="zoom img-fluid "  alt="">
+                  <a href="/service/{{service.title}}" class="fancybox" rel="ligthbox">
+                  <img  src={{service.image.url}} class="zoom img-fluid "  alt="">
                   </a>
                   <span class="hoverle">
-                  <a href="/blog/Digital Marketing Services and Online Marketing Solutions" class="fancybox" rel="ligthbox">Digital Marketing</a>
+                  <a href="/service/{{service.title}}" class="fancybox" rel="ligthbox">{{service.title}}</a>
                   </span>  
                </figure>
             </div>
          </div>
-         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 thumb">
-            <div class="service-box">
-               <figure>
-                  <a href="/blog/Influencer Marketing" class="fancybox" rel="ligthbox">
-                  <img  src="{% static "images/2.jpg" %}" class="zoom img-fluid "  alt="">
-                  </a>
-                  <span class="hoverle">
-                  <a href="/blog/Influencer Marketing" class="fancybox" rel="ligthbox">Influencer marketing</a>
-                  </span>
-               </figure>
-            </div>
-         </div>
-         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 thumb">
-            <div class="service-box">
-               <figure>
-                  <a href="/blog/Google listing(Digital Marketing)" class="fancybox" rel="ligthbox">
-                  <img  src="{% static "images/3.jpg" %}" class="zoom img-fluid "  alt="">
-                  </a>
-                  <span class="hoverle">
-                  <a href="/blog/Google listing(Digital Marketing)" class="fancybox" rel="ligthbox">Google listing</a>
-                  </span>
-               </figure>
-            </div>
-         </div>
-         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 thumb">
-            <div class="service-box">
-               <figure>
-                  <a href="/blog/Google listing(Digital Marketing)" class="fancybox" rel="ligthbox">
-                  <img  src="{% static "images/4.jpg" %}" class="zoom img-fluid "  alt="">
-                  </a>
-                  <span class="hoverle">
-                  <a href="/blog/Google listing(Digital Marketing)" class="fancybox" rel="ligthbox">Marketing</a>
-                  </span> 
-               </figure>
-            </div>
-         </div>
-         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 thumb">
-            <div class="service-box">
-               <figure>
-                  <a href="/blog/Affiliate Marketing" class="fancybox" rel="ligthbox">
-                  <img  src="{% static "images/5.jpg" %}" class="zoom img-fluid "  alt="">
-                  </a>
-                  <span class="hoverle">
-                  <a href="/blog/Affiliate Marketing" class="fancybox" rel="ligthbox">Digital marketing</a>
-                  </span> 
-               </figure>
-            </div>
-         </div>
-         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 thumb">
-            <div class="service-box">
-               <figure>
-                  <a href="/blog/Affiliate Marketing" class="fancybox" rel="ligthbox">
-                  <img  src="{% static "images/6.jpg" %}" class="zoom img-fluid "  alt="">
-                  </a>
-                  <span class="hoverle">
-                  <a href="/blog/Affiliate Marketing" class="fancybox" rel="ligthbox">Affiliate maketing</a>
-                  </span>
-               </figure>
-            </div>
-         </div>
+         {% endfor %}
       </div>
    </div>
 </div>
