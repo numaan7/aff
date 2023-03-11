@@ -13,5 +13,7 @@ urlpatterns = [
     path('blogs', views.blogs),
 
     path('blog/<str:posttitle>/', views.blogbytitle),
+    path('submitform/', views.submitform),
+
 
 ]

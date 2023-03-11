@@ -23,3 +23,22 @@ class Blog(models.Model):
     def __str__(self):
         return self.title
         
+class Service(models.Model):
+    title = models.CharField(max_length=255)
+    description = models.TextField()
+    
+    def __str__(self):
+        return self.title
+    
+class CustomerQuery(models.Model):
+    name = models.CharField(max_length=100)
+    phone = models.CharField(max_length=10)
+    email = models.CharField(max_length=100)
+    message = models.TextField()
+
+    class Meta:
+        verbose_name_plural = "Customer queries"
+
+    def __str__(self):
+        return self.name
+    
