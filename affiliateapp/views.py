@@ -66,3 +66,6 @@ def submitform(request):
     except Exception as e:
         print(str(e))
         return HttpResponse({'failed'})
+    
+def sitemap(request):
+    return render(request, 'sitemap.xml', content_type='application/xml')

@@ -17,6 +17,8 @@ urlpatterns = [
 
     path('submitform/', views.submitform),
     path('writeforus/', views.write),
+    path('sitemap/', views.sitemap),
+
 
 
 
