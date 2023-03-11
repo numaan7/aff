@@ -1660,6 +1660,11 @@ margin-bottom: 20px;
 	color: #fff;
 	transition: all 0.5s;
 }
+.image-hover:hover{
+	cursor: pointer;
+	color: #111111;
+	background: transparent;
+}
 
 #demo {
 	height: 100%;

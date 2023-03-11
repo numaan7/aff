@@ -1,29 +1,23 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block body %}
-<div id="service" class="service" style="margin-top:0px;">
+<div id="blog" class="blog">
    <div class="container">
       <div class="row">
          <div class="col-md-12">
-            <div class="titlepage" style="text-align:justify">
-               <h2>Blog </h2>
+            <div class="titlepage">
+               <h2>Our Blog</h2>
             </div>
          </div>
       </div>
-   </div>
-   <div class="container margin-r-l">
       <div class="row">
          {% for blog in allblogs %}
-         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 thumb">
-            <div class="service-box">
-               <figure>
-                  <a href="/blog/{{blog.title}}" class="fancybox" rel="ligthbox">
-                  <img  src={{blog.image.url}} class="zoom img-fluid "  alt="">
-                  </a>
-                  <span class="hoverle">
-                  <a href="/blog/{{blog.title}}" class="fancybox" rel="ligthbox">{{blog.title}}</a>
-                  </span>  
+         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+            <div class="blog-box">
+               <figure class="image-hover"><img style="margin-bottom:10px; max-height:300px" src={{blog.image.url}} alt="{{blog.image.alt}}"/>
+                  {% comment %} <span>10 August 2019</span> {% endcomment %}
                </figure>
+               <a href="/blog/{{blog.title}}"><h3>{{blog.title}}</h3></a>
             </div>
          </div>
          {% endfor %}
