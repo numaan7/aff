@@ -17,9 +17,7 @@ urlpatterns = [
 
     path('submitform/', views.submitform),
     path('writeforus/', views.write),
-    path('sitemap/', views.sitemap),
-
-
-
+    path('sitemap.xml', views.sitemap),
+    path('robots.txt/', views.robot),
 
 ]

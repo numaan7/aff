@@ -30,10 +30,12 @@ def contact(request):
     return render(request, 'contact.html')
 
 def blogbytitle(request, posttitle):
+    posttitle = posttitle.replace('-', ' ')
     blog = Blog.objects.get(title=posttitle)
     return render(request, 'blog.html', context={'blog':blog})
 
 def servicebytitle(request, servicetitle):
+    servicetitle = servicetitle.replace('-', ' ')
     service = Service.objects.get(title=servicetitle)
     return render(request, 'service.html', context={'service':service})
 
@@ -53,11 +55,6 @@ def submitform(request):
             name = request.POST['name']
             message = request.POST['message']
             phone = request.POST['phone']
-            print("-----------------",email)
-            print("-----------------",phone)
-            print("-----------------",message)
-            print("-----------------",name)
-
             if len(email)==0 or len(name)==0 or len(message)==0 or len(phone)!=10:
 
                 return HttpResponse({'failed'})
@@ -69,3 +66,6 @@ def submitform(request):
     
 def sitemap(request):
     return render(request, 'sitemap.xml', content_type='application/xml')
+
+def robot(request):
+    return render(request, 'robots.txt', content_type='text/html')

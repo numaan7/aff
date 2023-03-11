@@ -17,16 +17,24 @@
                <figure class="image-hover"><img style="margin-bottom:10px; max-height:300px" src={{blog.image.url}} alt="{{blog.image.alt}}"/>
                   {% comment %} <span>10 August 2019</span> {% endcomment %}
                </figure>
-               <a href="/blog/{{blog.title}}"><h3>{{blog.title}}</h3></a>
+               <a id="blog-title-{{blog.id}}" class="blog-title" href="/blog/{{blog.title}}"><h3>{{blog.title}}</h3></a>
             </div>
          </div>
          {% endfor %}
       </div>
    </div>
 </div>
-      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>  
-      <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
-      <script>
+<script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>  
+<script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+<script>
+   window.onload = function(e) {
+      var links = document.getElementsByClassName("blog-title"); 
+      for (let i = 0; i< links.length; i++) {
+         var linkString = (links[i].href)
+         var newLink = linkString.split('%20').join('-')
+         links[i].href = newLink
+      }
+   };
          function openNav() {
            document.getElementById("mySidenav").style.width = "100%";
          }

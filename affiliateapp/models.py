@@ -1,5 +1,7 @@
 from django.db import models
 from storages.backends.s3boto3 import S3Boto3Storage
+from django.utils.text import slugify
+
 import datetime
 class Product(models.Model):
     name = models.CharField(max_length=100)

@@ -1,5 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block title %}
+<title>Digital Marketing | Affiliate Marketing | Influencer Marketing</title>
+{% endblock title %}
+
+{% block metablock %}
+   <meta name="keywords" content="Digital Marketing Services, Affiliate Marketing Services, Influencer Marketing Services, Social Media MArketing Services">
+   <meta name="description" content="We are a leading provider of Digital Marketing, Affiliate Marketing and Influencer Marketing. Our team of experts has years of experience in promoting your business.">
+   <meta name="author" content="">
+{% endblock metablock %}
+
 {% block body %}
 <div id="service" class="service" style="margin-top:0px;">
    <div class="container">
@@ -24,11 +35,11 @@
          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 thumb">
             <div class="service-box">
                <figure>
-                  <a href="/service/{{service.title}}" class="fancybox" rel="ligthbox">
+                  <a class="service-title" href="/service/{{service.title}}" class="fancybox" rel="ligthbox">
                   <img  src={{service.image.url}} class="zoom img-fluid "  alt="">
                   </a>
                   <span class="hoverle">
-                  <a href="/service/{{service.title}}" class="fancybox" rel="ligthbox">{{service.title}}</a>
+                  <a class="service-title" href="/service/{{service.title}}" class="fancybox" rel="ligthbox">{{service.title}}</a>
                   </span>  
                </figure>
             </div>
@@ -37,5 +48,16 @@
       </div>
    </div>
 </div>
-<!-- end service -->
+<script>
+   window.onload = function(e) {
+      var links = document.getElementsByClassName("service-title"); 
+      for (let i = 0; i< links.length; i++) {
+         var linkString = (links[i].href)
+         var newLink = linkString.split('%20').join('-')
+         links[i].href = newLink
+         console.log(links[i].href)
+         
+      }
+   };
+</script>
 {% endblock body %}
