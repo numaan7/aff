@@ -26,6 +26,7 @@ class Blog(models.Model):
     blog_description = models.TextField(default='description')
     blog_keywords = models.TextField(default='description')
 
+
     def __str__(self):
         return self.title
         
