@@ -22,6 +22,9 @@ class Blog(models.Model):
     image = models.ImageField(storage=S3Boto3Storage(), default="www.google.com")
     altname = models.CharField(max_length=100, default='image')
     blog_url = models.TextField(default='blog-url')
+    blog_tab_title = models.CharField(max_length=255, default='title')
+    blog_description = models.TextField(default='description')
+    blog_keywords = models.TextField(default='description')
 
     def __str__(self):
         return self.title
@@ -31,7 +34,9 @@ class Service(models.Model):
     description = models.TextField()
     image = models.ImageField(storage=S3Boto3Storage(), default="image-link")
     service_url = models.TextField(default='service-url')
-
+    service_tab_title = models.CharField(max_length=255, default='title')
+    service_description = models.TextField(default='description')
+    service_keywords = models.TextField(default='keywords')
     
     def __str__(self):
         return self.title

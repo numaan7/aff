@@ -1,19 +1,27 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block title %}
-<title>Digital Marketing | Affiliate Marketing | Influencer Marketing 
-</title>
+<title>{{service.service_tab_title}}</title>
 {% endblock title %}
+
+{% block metablock %}
+   <meta name="description" content="{{service.service_description}}">
+   
+   <meta name="keywords" content="{{service.service_keywords}}">
+   <meta name="author" content="">
+{% endblock metablock %}
+
 {% block body %}
 <div class="layout_padding" style="padding-bottom:0px">
    <div class="container">
       {% comment %} {% for blog in allblogs %} {% endcomment %}
      <div class="" style="margin-top:25px; margin-bottom:25px">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                <div><img src={{service.image.url}} class="image_3"></div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
                <div class="about_taital_main">
                   <h2 class="about_text" style="font-size:26px">{{service.title}}</h2>
                   <p class="about_text" style="font-size:16px">{{service.description | safe}}<h3></h3></p>
