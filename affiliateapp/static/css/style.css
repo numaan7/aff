@@ -1551,7 +1551,7 @@ margin-bottom: 20px;
 .read-more a:hover {
 	background: #fc4311;
     border-radius: 25px;
-    transition: ease-in all 0.1s;
+    /* transition: ease-in all 0.1s; */
 }
 
 
@@ -1595,6 +1595,22 @@ margin-bottom: 20px;
 	background-color: #6fb936;
 }
 
+/* .service-box:hover > .service-title {
+	visibility: visible;
+}  */
+
+.parent-div:hover {
+	cursor: pointer;
+}
+
+/* .service-box:hover+.service-title-a{
+	visibility: visible;
+} */
+
+.parent-div:hover+.child-div{
+	display: block;
+}
+
 .service .service-box .hoverle {
 	position: absolute;
 	top: 0;
@@ -1606,7 +1622,7 @@ margin-bottom: 20px;
 	justify-content: center;
 	align-items: center;
 	margin: 0 15px;
-	transition: all 0.5s;
+	/* transition: all 0.5s; */
     border-radius: 20px;
 }
 
@@ -1637,6 +1653,23 @@ margin-bottom: 20px;
     justify-content: center
 }
 
+
+.hoverle-atag:hover{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	background: #fff;
+	align-items: center;
+	margin: 0 15px;
+	border-radius: 20px;
+	/* transition: all 0.5s; */
+}
+
 .service .service-box:hover .hoverle {
 	position: absolute;
 	top: 0;
@@ -1650,15 +1683,20 @@ margin-bottom: 20px;
 	align-items: center;
 	margin: 0 15px;
 	border-radius: 20px;
-	transition: all 0.5s;
+	/* transition: all 0.1s; */
+}
+
+.service .service-box .hoverle a {
+	visibility:hidden;
 }
 
 .service .service-box:hover .hoverle a {
+	visibility:visible;
 	border: #fff solid 1px;
 	background: transparent;
 	padding: 5px 30px;
 	color: #fff;
-	transition: all 0.5s;
+	/* transition: all 0.1s;  */
 }
 .image-hover:hover{
 	cursor: pointer;
