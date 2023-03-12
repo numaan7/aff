@@ -5,15 +5,18 @@
 </title>
 {% endblock title %}
 {% block body %}
-<div id="blog" class="blog">
+<div id="service" class="service" style="margin-top:0px;">
    <div class="container">
       <div class="row">
          <div class="col-md-12">
-            <div class="titlepage">
-               <h2>Our Blog</h2>
+            <div class="titlepage" style="text-align:justify">
+               <h2>Blogs </h2>
             </div>
          </div>
       </div>
+   </div>
+
+   <div class="container margin-r-l">
       <div class="row">
          {% for blog in allblogs %}
          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 thumb" style="align-items: center;display: flex; justify-content: center;">
