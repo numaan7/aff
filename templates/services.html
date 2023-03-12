@@ -32,20 +32,6 @@
    <div class="container margin-r-l">
       <div class="row">
          {% for service in services %}
-         {% comment %} <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 thumb" style="align-items: center;display: flex; justify-content: center;">
-            <div class="service-box" style="display: flex;justify-content: center;align-items: center;">
-               <figure>
-                  <a class="service-title" href="/services/{{service.service_url}}" class="fancybox" rel="ligthbox">
-                  <img  src={{service.image.url}} class="zoom img-fluid "  alt="">
-                  </a>
-                  <span class="hoverle">
-                  <a style="visibility: hidden;" href="/services/{{service.service_url}}" class="fancybox service-title-a" rel="ligthbox">{{service.title}}</a>
-                  <div class="demo-div" style="display: none;">wodihwuohlwjdnwldnwkn</div>
-                  </span>  
-               </figure>
-            </div>
-         </div> {% endcomment %}
-
          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 thumb" style="align-items: center;display: flex; justify-content: center;">
             <div class="service-box" style="display: flex;justify-content: center;align-items: center;">
             
@@ -60,9 +46,6 @@
                
             </div>
          </div>
-         
-         {% comment %} </div> {% endcomment %}
-
          {% endfor %}
       </div>
    </div>

@@ -16,12 +16,18 @@
       </div>
       <div class="row">
          {% for blog in allblogs %}
-         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-            <div class="blog-box">
-               <figure class="image-hover"><img style="margin-bottom:10px; max-height:300px" src={{blog.image.url}} alt="{{blog.image.alt}}"/>
-                  {% comment %} <span>10 August 2019</span> {% endcomment %}
+         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 thumb" style="align-items: center;display: flex; justify-content: center;">
+            <div class="service-box" style="display: flex;justify-content: center;align-items: center;">
+            
+               <figure>
+                     <a class="service-title" href="/blogs/{{blog.blog_url}}" class="fancybox" rel="ligthbox">
+                     <img  src={{blog.image.url}} class="zoom img-fluid "  alt="">
+                     </a>
+                     <span class="hoverle">
+                        <a style="v" href="/blogs/{{blog.blog_url}}" class="fancybox service-title-a" rel="ligthbox">{{blog.title}}</a>
+                     </span> 
                </figure>
-               <a id="blog-title-{{blog.id}}" class="blog-title" href="/blogs/{{blog.blog_url}}"><h3>{{blog.title}}</h3></a>
+               
             </div>
          </div>
          {% endfor %}
