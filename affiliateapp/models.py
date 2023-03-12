@@ -21,6 +21,7 @@ class Blog(models.Model):
     timestamp = models.DateTimeField(default=datetime.datetime.now())
     image = models.ImageField(storage=S3Boto3Storage(), default="www.google.com")
     altname = models.CharField(max_length=100, default='image')
+    blog_url = models.TextField(default='blog-url')
 
     def __str__(self):
         return self.title
@@ -29,6 +30,8 @@ class Service(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
     image = models.ImageField(storage=S3Boto3Storage(), default="image-link")
+    service_url = models.TextField(default='service-url')
+
     
     def __str__(self):
         return self.title

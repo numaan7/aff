@@ -29,14 +29,12 @@ def client(request):
 def contact(request):
     return render(request, 'contact.html')
 
-def blogbytitle(request, posttitle):
-    posttitle = posttitle.replace('-', ' ')
-    blog = Blog.objects.get(title=posttitle)
+def blogbyurl(request, posturl):
+    blog = Blog.objects.get(blog_url=posturl)
     return render(request, 'blog.html', context={'blog':blog})
 
-def servicebytitle(request, servicetitle):
-    servicetitle = servicetitle.replace('-', ' ')
-    service = Service.objects.get(title=servicetitle)
+def servicebyurl(request, serviceurl):
+    service = Service.objects.get(service_url=serviceurl)
     return render(request, 'service.html', context={'service':service})
 
 def blogs(request):

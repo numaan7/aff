@@ -9,11 +9,11 @@ urlpatterns = [
     path('services', views.services),
 
     path('client', views.client),
-    path('contact', views.contact),
+    path('contact/', views.contact),
     path('blogs', views.blogs),
 
-    path('blog/<str:posttitle>/', views.blogbytitle),
-    path('service/<str:servicetitle>/', views.servicebytitle),
+    path('blogs/<str:posturl>/', views.blogbyurl),
+    path('services/<str:serviceurl>/', views.servicebyurl),
 
     path('submitform/', views.submitform),
     path('writeforus/', views.write),
