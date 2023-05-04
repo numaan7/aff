@@ -7,7 +7,7 @@ class ProductAdmin(admin.ModelAdmin):
 admin.site.register(Product, ProductAdmin)
 
 class BlogAdmin(admin.ModelAdmin):
-    list_display = ('title', 'timestamp')
+    list_display = ('title',)
     
 admin.site.register(Blog, BlogAdmin)
 

@@ -8,7 +8,7 @@ class Product(models.Model):
     link = models.TextField()
     description = models.TextField(default="This is an awesomeproduct")
     price = models.IntegerField(default=100)
-    image = models.ImageField(storage=S3Boto3Storage(), default=None)
+    image = models.ImageField(storage=S3Boto3Storage(), default=None,blank=True)
     altname = models.CharField(max_length=100, default='image')
 
 
@@ -33,7 +33,7 @@ class Blog(models.Model):
 class Service(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
-    image = models.ImageField(storage=S3Boto3Storage(), default="image-link")
+    image = models.ImageField(storage=S3Boto3Storage(), default="image-link",blank=True)
     service_url = models.TextField(default='service-url')
     service_tab_title = models.CharField(max_length=255, default='title')
     service_description = models.TextField(default='description')
